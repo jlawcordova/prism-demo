@@ -1,0 +1,37 @@
+openapi: '3.0.2'
+info:
+  title: foodkoala API
+  version: '1.0'
+paths:
+  /food/{restaurantId}:
+    get:
+      parameters:
+        - name: restaurantId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/food"
+
+components:
+  schemas:
+    food:
+      type: object
+      properties:
+        name:
+          type: string
+          x-faker: commerce.productName
+        price:
+          type: number
+          x-faker: commerce.price
+        imageUrl:
+          type: string
+          x-fake: imageUrl.food

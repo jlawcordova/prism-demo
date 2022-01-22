@@ -1,0 +1,26 @@
+.Food {
+    color: black;
+    background-color: white;
+    padding: 16px 8px;
+    margin: 24px;
+    border-radius: 24px;
+    width: 260px;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.Price {
+    color: green;
+    margin-top: 8px;
+}
+
+img {
+    border-radius: 16px;
+    max-width: 242px;
+    height: 272px;
+    object-fit: cover;
+}
